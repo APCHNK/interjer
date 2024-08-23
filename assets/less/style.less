@@ -1,0 +1,635 @@
+@import url("https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "normalize";
+@import "modal";
+@import "flexbox";
+@import "helpclass";
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  background: #fefefe;
+  color: black;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  .df;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+  .fc;
+}
+.menu {
+  display: none;
+}
+header {
+  .top-info {
+    padding: 22px 0;
+    background: linear-gradient(270deg, #bcc3ca 0%, #eff4ff 100%);
+    .container {
+      max-width: 1280px;
+      ul {
+        display: flex;
+        li {
+          font-family: "Open Sans";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 170%;
+          display: flex;
+          align-items: center;
+          text-transform: capitalize;
+          color: #051951;
+          padding-left: 25px;
+          &.phone-item {
+            background: no-repeat left center / 20px url("../img/phone.svg");
+          }
+          &.time-item {
+            background: no-repeat left center / 20px url("../img/time.svg");
+          }
+          &.location-item {
+            background: no-repeat left center / 20px url("../img/location.svg");
+          }
+          &:not(:last-child) {
+            margin-right: 38px;
+          }
+        }
+      }
+    }
+  }
+  .bottom-info {
+    padding: 25px 0;
+    background: #051951;
+    .container {
+      max-width: 1280px;
+      .block {
+        nav {
+          display: flex;
+          align-items: center;
+          ul {
+            display: flex;
+            li {
+              font-family: "Miriam Libre", sans-serif;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 170%;
+              display: flex;
+              text-align: center;
+              text-transform: capitalize;
+              color: #fefefe;
+              &:not(:last-child) {
+                margin-right: 38px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.sec1 {
+  background-image: url("../img/main-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: calc(~"100vh - 205px");
+  min-height: 630px;
+  .container {
+    max-width: 1170px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .title {
+      max-width: 813px;
+      h1 {
+        font-family: "Miriam Libre", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 110%;
+        color: #051951;
+        span {
+          color: #f18f01;
+          display: inline;
+        }
+      }
+    }
+    ul {
+      margin-top: 32px;
+      li {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 170%;
+        text-transform: capitalize;
+        color: #051951;
+        padding: 11px 0;
+        display: flex;
+        position: relative;
+        &:before {
+          content: url("../img/list-style.svg");
+          margin-right: 10px;
+          margin-top: 2px;
+          height: 20px;
+        }
+        &:not(:first-child) {
+          &:after {
+            content: "";
+            width: 169px;
+            height: 1px;
+            background: #dddddd;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.btn-order {
+  margin-top: 32px;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 170%;
+  text-transform: uppercase;
+  color: #fefefe;
+  padding: 16px 32px;
+  background: #f18f01;
+  display: flex;
+  width: max-content;
+  padding-right: 62px;
+  background-image: url("../img/btn-arrow.svg");
+  background-position: right 32px top 45%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+  &:hover {
+    background-color: #ffa625;
+    opacity: 1;
+  }
+}
+.sec2 {
+  padding: 99px 0 120px;
+  .container {
+    max-width: 1232px;
+    .title {
+      h2 {
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 130%;
+        font-variant: small-caps;
+        color: #051951;
+        text-align: center;
+      }
+    }
+    .items {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 70px;
+      .item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .icon {
+          position: relative;
+          display: flex;
+          align-items: center;
+          img {
+            margin: 0 64px;
+          }
+          &:before {
+            content: "";
+            height: 3px;
+            background: #051951;
+            width: 136px;
+            display: flex;
+          }
+          &:after {
+            content: "";
+            height: 3px;
+            background: #051951;
+            width: 136px;
+            display: flex;
+          }
+        }
+        &:first-child {
+          .icon {
+            &:before {
+              background: #fff;
+            }
+          }
+        }
+        &:last-child {
+          .icon {
+            &:after {
+              background: #fff;
+            }
+          }
+        }
+        p {
+          max-width: 310px;
+        }
+        .icon {
+          margin-bottom: 30px;
+        }
+        p {
+          font-family: "Open Sans";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 170%;
+          text-align: center;
+          color: #051951;
+        }
+      }
+    }
+  }
+}
+.sec3 {
+  background: #051951;
+  .container {
+    background-image: url("../img/man.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    max-width: 1170px;
+    padding: 100px 0 200px;
+    .txt {
+      max-width: 470px;
+      margin-left: auto;
+      .title {
+        margin-bottom: 32px;
+        h2 {
+          font-family: "Open Sans";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 70px;
+          line-height: 130%;
+          font-variant: small-caps;
+          color: #f18f01;
+        }
+      }
+      p {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 170%;
+        color: #f4f4f4;
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+.sec4 {
+  background: #f8f8f8;
+  .container {
+    background: #f18f01;
+    max-width: 1109px;
+    margin-top: -34px;
+    .items {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 57px;
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        &:not(:last-child) {
+          border-right: 3px solid #fefefe;
+        }
+        span {
+          font-family: "Open Sans";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 67.3432px;
+          line-height: 92px;
+          color: #fefefe;
+        }
+        p {
+          font-family: "Miriam Libre", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 21.328px;
+          line-height: 28px;
+          color: #fefefe;
+        }
+      }
+    }
+  }
+}
+.sec5 {
+  background: #f8f8f8;
+  padding: 120px 0 132px;
+  .container {
+    max-width: 1146px;
+    .title {
+      margin: 0 auto 84px;
+      max-width: 870px;
+      h2 {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 140%;
+        text-align: center;
+        color: #051951;
+      }
+    }
+    .steps-title {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 64px 0 78px;
+      padding-bottom: 28px;
+      position: relative;
+      &:after {
+        content: "";
+        width: 100%;
+        max-width: 887px;
+        bottom: 0;
+        height: 1px;
+        left: 50%;
+        background: #dddddd;
+        transform: translateX(-50%);
+        position: absolute;
+      }
+      span {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: #051951;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background: #dddddd;
+          bottom: -38px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+    .steps-items {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 84px;
+      .step-item {
+        max-width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:before {
+          content: attr(data-number);
+          width: 170px;
+          height: 170px;
+          border-radius: 50%;
+          background: #051951;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: "Open Sans";
+          font-style: normal;
+          font-weight: 800;
+          font-size: 103px;
+          line-height: 170%;
+          text-align: center;
+          color: #fff;
+          margin-bottom: 32px;
+        }
+        span {
+          font-family: "Miriam Libre", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 21.328px;
+          line-height: 28px;
+          text-align: center;
+          color: #051951;
+          margin-bottom: 12px;
+          max-width: 222px;
+        }
+        p {
+          font-family: "Open Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 170%;
+          text-align: center;
+          color: #666666;
+        }
+      }
+    }
+  }
+}
+.sec6 {
+  padding: 113px 0 118px;
+  .container {
+    max-width: 1460px;
+    .arrows {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      .swiper-next,
+      .swiper-prev {
+        background: #051951;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        position: relative;
+        transition: 0.3s;
+        &:after {
+          content: url("../img/slider-arrow.svg");
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 18px;
+        }
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+      .swiper-prev {
+        transform: rotate(180deg);
+      }
+    }
+    .container-swiper {
+      max-width: 1020px;
+      width: 100%;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+  }
+}
+.sec7 {
+  background: no-repeat url("../img/form-background.jpg");
+  padding: 100px 0;
+  margin-bottom: 30px;
+  .container {
+    max-width: 1140px;
+    .title {
+      h3 {
+        font-family: "Miriam Libre", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 140%;
+        text-align: center;
+        color: #fefefe;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        span {
+          color: #f18f01;
+        }
+      }
+    }
+    form {
+      max-width: 470px;
+      margin: 60px auto 0;
+      input {
+        background: #fefefe;
+        border: 1px solid #c4c4c4;
+        border-radius: 2px;
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 170%;
+        text-transform: capitalize;
+        color: #000;
+        height: 70px;
+        padding-left: 27px;
+        margin-bottom: 30px;
+        &::placeholder {
+          color: #666666;
+        }
+      }
+      button {
+        background: #f18f01;
+        font-family: "Miriam Libre", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 170%;
+        text-align: right;
+        text-transform: capitalize;
+        color: #fefefe;
+        padding: 16px 32px;
+        margin: 40px auto 0;
+        display: flex;
+        transition: 0.3s;
+        &:hover {
+          background: #ffa625;
+        }
+      }
+    }
+  }
+}
+a {
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+footer {
+  margin-top: auto;
+  .owner {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 180%;
+    padding: 35px 0;
+    letter-spacing: 0.03em;
+    color: #051951;
+    display: flex;
+    justify-content: center;
+  }
+  .footer-wrapper {
+    background: #051951;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1280px;
+      padding: 100px 0;
+      .columns {
+        display: flex;
+        gap: 30px;
+        max-width: 870px;
+        width: 100%;
+        .column {
+          max-width: 270px;
+          width: 100%;
+          ul {
+            li {
+              font-family: "Miriam Libre", sans-serif;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 170%;
+              text-transform: capitalize;
+              color: #fefefe;
+              margin-bottom: 5px;
+              a {
+                display: flex;
+                &:before {
+                  content: url("../img/footer-lists.svg");
+                  margin-right: 15px;
+                  height: 26px;
+                }
+              }
+            }
+          }
+          .column-title {
+            font-family: "Miriam Libre", sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 21.328px;
+            line-height: 130%;
+            text-transform: capitalize;
+            color: #fefefe;
+            margin-bottom: 30px;
+          }
+          p {
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 170%;
+            color: #fefefe;
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "adaptive";
